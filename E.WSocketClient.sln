@@ -11,6 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E.WebSocketClient", "src\E.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E.WebSocketClient.Test", "test\E.WebSocketClient.Test\E.WebSocketClient.Test.csproj", "{C0E160CD-4461-4AEF-923A-E015ED24CA35}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{05B4FB6D-115E-426F-9A8D-3E319726A32C}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

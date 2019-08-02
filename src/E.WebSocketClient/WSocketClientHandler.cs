@@ -15,6 +15,8 @@ namespace E
         readonly WebSocketClientHandshaker _handshaker;
         readonly TaskCompletionSource _completionSource;
 
+        #region 事件
+
         /// <summary>
         /// 开启
         /// </summary>
@@ -38,7 +40,9 @@ namespace E
         /// <summary>
         /// 异常
         /// </summary>
-        public event EventHandler<Exception> OnError;
+        public event EventHandler<Exception> OnError; 
+
+        #endregion
 
 
         public WSocketClientHandler(WebSocketClientHandshaker handshaker)
