@@ -119,7 +119,6 @@ namespace E
             this.OnError?.Invoke(ctx, exception);
 
             await ctx.CloseAsync();
-            this.OnClose?.Invoke(ctx, null);
         }
     }
 }
