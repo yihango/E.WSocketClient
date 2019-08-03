@@ -61,6 +61,11 @@ namespace E.WebSocketClient.Test
 
             wsClient = client;
 
+
+            Console.WriteLine("ref: 获取所有聊天室");
+            Console.WriteLine("bye: 退出程序");
+            Console.WriteLine("ping: 发送ping消息");
+            Console.WriteLine("直接输入发送文本消息");
             while (true)
             {
                 string msg = Console.ReadLine();
@@ -135,7 +140,7 @@ namespace E.WebSocketClient.Test
 
             var dataText = e.Text();
 
-            if (dataText.StartsWith("用户"))
+            if (dataText.StartsWith("\"用户"))
             {
                 Console.WriteLine(dataText);
                 return;
