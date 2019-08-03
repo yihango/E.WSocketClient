@@ -135,6 +135,12 @@ namespace E.WebSocketClient.Test
 
             var dataText = e.Text();
 
+            if (dataText.StartsWith("用户"))
+            {
+                Console.WriteLine(dataText);
+                return;
+            }
+
             var data = JsonConvert.DeserializeObject<dynamic>
                 (JsonConvert.DeserializeObject<dynamic>(dataText));
             switch ((string)data.msg.type)
