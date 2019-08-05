@@ -30,7 +30,7 @@ namespace E
         /// <summary>
         /// 消息
         /// </summary>
-        public event EventHandler<TextWebSocketFrame> OnMessage;
+        public event EventHandler<WebSocketFrame> OnMessage;
 
         /// <summary>
         /// pong 消息
@@ -40,7 +40,7 @@ namespace E
         /// <summary>
         /// 异常
         /// </summary>
-        public event EventHandler<Exception> OnError; 
+        public event EventHandler<Exception> OnError;
 
         #endregion
 
@@ -98,9 +98,14 @@ namespace E
                 this.OnError?.Invoke(ctx, exception);
             }
 
+
             if (msg is TextWebSocketFrame textFrame)
             {
                 this.OnMessage?.Invoke(ctx, textFrame);
+            }
+            else if (msg is BinaryWebSocketFrame binaryFrame)
+            {
+                this.OnMessage?.Invoke(ctx, binaryFrame);
             }
             else if (msg is PongWebSocketFrame pong)
             {

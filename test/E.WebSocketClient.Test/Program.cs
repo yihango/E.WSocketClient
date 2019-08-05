@@ -134,11 +134,11 @@ namespace E.WebSocketClient.Test
             Console.WriteLine("Client_OnClose");
         }
 
-        private static void Client_OnMessage(object sender, TextWebSocketFrame e)
+        private static void Client_OnMessage(object sender, WebSocketFrame e)
         {
             Console.WriteLine($"Client_OnMessage: ");
 
-            var dataText = e.Text();
+            var dataText = (e as TextWebSocketFrame).Text();
 
             if (dataText.StartsWith("\"用户"))
             {

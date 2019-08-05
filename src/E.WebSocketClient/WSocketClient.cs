@@ -33,7 +33,7 @@ namespace E
         /// <summary>
         /// 消息
         /// </summary>
-        public event EventHandler<TextWebSocketFrame> OnMessage;
+        public event EventHandler<WebSocketFrame> OnMessage;
 
         /// <summary>
         /// 异常
@@ -399,7 +399,7 @@ namespace E
             this.OnPong?.Invoke(sender, e);
         }
 
-        private void Handler_OnMessage(object sender, TextWebSocketFrame e)
+        private void Handler_OnMessage(object sender, WebSocketFrame e)
         {
             this.OnMessage?.Invoke(sender, e);
         }
